@@ -1,0 +1,290 @@
+/* =====================================================
+   VARIABLES: cambia aquí los colores y cambia toda la web
+   ===================================================== */
+:root {
+  --bg: #0b0f1a;          /* fondo principal (oscuro, estilo gamer/tech) */
+  --bg-alt: #121829;      /* fondo de secciones alternas */
+  --card: #182033;        /* fondo de tarjetas */
+  --text: #e8ecf5;        /* texto principal */
+  --muted: #9aa4bd;       /* texto secundario */
+  --accent: #7c5cff;      /* color principal (morado) */
+  --accent-2: #22d3ee;    /* color secundario (cian) */
+  --radius: 16px;         /* esquinas redondeadas */
+}
+
+/* Reset básico: quita márgenes raros del navegador */
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+html { scroll-behavior: smooth; } /* scroll suave al pulsar el menú */
+
+body {
+  font-family: "Inter", system-ui, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.6;
+}
+
+a { color: inherit; text-decoration: none; }
+
+/* El contenedor centra el contenido y limita su ancho */
+.container {
+  width: 100%;
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 16px;
+}
+
+/* ========== BOTONES ========== */
+.btn {
+  display: inline-block;
+  padding: 12px 24px;
+  border-radius: 999px;
+  font-weight: 600;
+  background: linear-gradient(135deg, var(--accent), var(--accent-2));
+  color: #fff;
+  transition: transform .2s, box-shadow .2s;
+}
+.btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(124, 92, 255, .4);
+}
+.btn--ghost { background: transparent; border: 2px solid var(--accent); }
+.btn--small { padding: 8px 18px; }
+.btn--big { padding: 16px 32px; font-size: 1.1rem; }
+
+/* ========== CABECERA ========== */
+.header {
+  position: sticky;   /* se queda fija arriba al hacer scroll */
+  top: 0;
+  z-index: 10;
+  background: rgba(11, 15, 26, .85);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid #1f2840;
+}
+.header__inner {
+  display: flex;      /* pone logo y menú en la misma fila */
+  justify-content: space-between;
+  align-items: center;
+  height: 68px;
+}
+.logo { font-weight: 800; font-size: 1.3rem; }
+.logo span { color: var(--accent-2); }
+.nav { display: flex; gap: 24px; align-items: center; }
+.nav a:not(.btn) { color: var(--muted); }
+.nav a:not(.btn):hover { color: var(--text); }
+
+/* ========== HERO ========== */
+.hero {
+  padding: 110px 0 90px;
+  text-align: center;
+  background: radial-gradient(circle at 50% 0%, rgba(124, 92, 255, .25), transparent 60%);
+}
+.tag {
+  display: inline-block;
+  padding: 6px 14px;
+  border-radius: 999px;
+  background: var(--card);
+  color: var(--muted);
+  font-size: .9rem;
+  margin-bottom: 20px;
+}
+.hero h1 {
+  font-size: clamp(2rem, 6vw, 3.5rem); /* tamaño que se adapta a la pantalla */
+  line-height: 1.15;
+  font-weight: 800;
+  margin-bottom: 20px;
+}
+.highlight {
+  background: linear-gradient(135deg, var(--accent), var(--accent-2));
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+.hero__text {
+  max-width: 620px;
+  margin: 0 auto 32px;
+  color: var(--muted);
+  font-size: 1.1rem;
+}
+.hero__buttons { display: flex; gap: 12px; flex-wrap: wrap; }
+
+/* Hero en 2 columnas: texto | formulario */
+.hero { text-align: left; padding: 80px 0; }
+.hero__grid {
+  display: grid;
+  grid-template-columns: 1.2fr 1fr;
+  gap: 48px;
+  align-items: center;
+}
+.hero__text { margin: 0 0 32px; }
+
+/* Lista de puntos de confianza en 2 columnas */
+.trust {
+  list-style: none;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px 20px;
+  margin-top: 32px;
+  color: var(--muted);
+  font-size: .95rem;
+}
+
+/* Tarjeta del formulario (fondo claro para que destaque) */
+.quote {
+  background: #f5f7fb;
+  color: #0b0f1a;
+  padding: 28px;
+  border-radius: var(--radius);
+  box-shadow: 0 20px 60px rgba(124, 92, 255, .35);
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+.quote h2 { font-size: 1.5rem; }
+.quote p, .quote small { color: #5b6478; }
+.quote input, .quote textarea {
+  font: inherit;
+  padding: 12px 14px;
+  border: 1px solid #d5dbe8;
+  border-radius: 10px;
+  background: #fff;
+}
+.quote input:focus, .quote textarea:focus { outline: 2px solid var(--accent); border-color: transparent; }
+.quote .btn { border: none; cursor: pointer; font: inherit; font-weight: 600; }
+
+/* ========== FAQ ========== */
+.faq { max-width: 760px; }
+.faq h2 { margin-bottom: 32px; }
+.faq details {
+  background: var(--card);
+  border: 1px solid #222c45;
+  border-radius: 12px;
+  padding: 18px 22px;
+  margin-bottom: 12px;
+}
+.faq summary { cursor: pointer; font-weight: 600; }
+.faq details p { color: var(--muted); margin-top: 10px; }
+
+/* ========== BOTÓN FLOTANTE WHATSAPP ========== */
+.wa-float {
+  position: fixed;
+  right: 20px;
+  bottom: 20px;
+  width: 58px;
+  height: 58px;
+  border-radius: 50%;
+  background: #25d366;
+  display: grid;
+  place-items: center;
+  font-size: 1.6rem;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, .4);
+  z-index: 20;
+  transition: transform .2s;
+}
+.wa-float:hover { transform: scale(1.1); }
+
+/* ========== SECCIONES ========== */
+.section { padding: 80px 0; }
+.section--alt { background: var(--bg-alt); }
+.section h2 {
+  font-size: clamp(1.6rem, 4vw, 2.3rem);
+  text-align: center;
+  margin-bottom: 12px;
+}
+.section__subtitle { text-align: center; color: var(--muted); margin-bottom: 40px; }
+.section h2 + .grid { margin-top: 40px; }
+
+/* GRID: columnas automáticas que se ajustan al ancho */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+  gap: 20px;
+}
+.grid--3 { grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); }
+
+/* ========== TARJETAS DE SERVICIOS ========== */
+.card {
+  background: var(--card);
+  padding: 28px;
+  border-radius: var(--radius);
+  border: 1px solid #222c45;
+  transition: transform .2s, border-color .2s;
+}
+.card:hover { transform: translateY(-4px); border-color: var(--accent); }
+.card__icon { font-size: 2rem; margin-bottom: 12px; }
+.card h3 { margin-bottom: 8px; }
+.card p { color: var(--muted); }
+
+/* ========== PROYECTOS ========== */
+.project {
+  background: var(--card);
+  border-radius: var(--radius);
+  overflow: hidden;
+  border: 1px solid #222c45;
+}
+.project__body { padding: 20px; }
+
+/* Tarjeta de proyecto con enlace y foto real */
+.project--link { display: block; transition: transform .2s, border-color .2s; }
+.project--link:hover { transform: translateY(-4px); border-color: var(--accent); }
+.project__photo { width: 100%; height: 180px; object-fit: cover; display: block; }
+.project__tag { font-family: "Inter", sans-serif; font-size: .7rem; padding: 2px 8px; border-radius: 999px; background: var(--accent); vertical-align: middle; margin-left: 6px; }
+.project__cta { color: var(--accent-2) !important; font-weight: 600; margin-top: 8px; }
+.project__body p { color: var(--muted); }
+
+/* ========== PRECIOS ========== */
+.price {
+  position: relative;
+  background: var(--card);
+  padding: 32px 28px;
+  border-radius: var(--radius);
+  border: 1px solid #222c45;
+  display: flex;
+  flex-direction: column;
+}
+.price--featured { border: 2px solid var(--accent); transform: scale(1.03); }
+.price__badge {
+  position: absolute;
+  top: -14px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: var(--accent);
+  padding: 4px 14px;
+  border-radius: 999px;
+  font-size: .8rem;
+  font-weight: 600;
+}
+.price__amount { font-size: 2.6rem; font-weight: 800; margin: 8px 0 20px; }
+.price__amount span { font-size: 1rem; color: var(--muted); font-weight: 400; }
+.price ul { list-style: none; margin-bottom: 28px; flex-grow: 1; }
+.price li { padding: 6px 0; color: var(--muted); }
+.price .btn { text-align: center; }
+
+/* ========== CONTACTO ========== */
+.contact { text-align: center; }
+.contact > p { color: var(--muted); margin-bottom: 32px; }
+.contact__mail { margin-top: 20px; color: var(--muted); }
+.contact__mail a { color: var(--accent-2); }
+
+/* ========== PIE ========== */
+.footer {
+  padding: 28px 0;
+  text-align: center;
+  color: var(--muted);
+  font-size: .9rem;
+  border-top: 1px solid #1f2840;
+}
+
+/* =====================================================
+   MÓVIL: estas reglas solo se aplican en pantallas pequeñas
+   ===================================================== */
+@media (max-width: 900px) {
+  .hero__grid { grid-template-columns: 1fr; } /* formulario debajo del texto */
+}
+
+@media (max-width: 640px) {
+  .trust { grid-template-columns: 1fr; }
+  .nav a:not(.btn) { display: none; } /* en móvil solo dejamos el botón */
+  .hero { padding: 80px 0 60px; }
+  .price--featured { transform: none; }
+}

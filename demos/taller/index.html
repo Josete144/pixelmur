@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pistón Motor · Taller mecánico en Murcia</title>
+  <meta name="description" content="Taller mecánico multimarca en Murcia. Calcula tu presupuesto online: aceite, frenos, pre-ITV, neumáticos y más.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <!-- Barlow Condensed: fuente estrecha y fuerte, muy "industrial" -->
+  <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;600&family=Barlow+Condensed:wght@600;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header class="header">
+    <div class="container header__inner">
+      <a href="#" class="logo"><span class="logo__icon">⚙</span> PISTÓN<b>MOTOR</b></a>
+      <nav class="nav">
+        <a href="#servicios">Servicios</a>
+        <a href="#presupuesto">Presupuesto</a>
+        <a href="#contacto">Contacto</a>
+        <!-- tel: abre la app de llamadas en el móvil -->
+        <a href="tel:+34600000000" class="btn btn--small">📞 Llamar</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- ========== HERO ========== -->
+  <section class="hero">
+    <div class="container">
+      <p class="tag">Taller multimarca · Murcia</p>
+      <h1>Tu coche, en manos<br><span>de profesionales</span></h1>
+      <p class="hero__text">Mecánica, frenos, pre-ITV y neumáticos. Precio cerrado antes de empezar: sin sustos al pagar.</p>
+      <div class="hero__buttons">
+        <a href="#presupuesto" class="btn">Calcular presupuesto</a>
+        <a href="#contacto" class="btn btn--outline">Cómo llegar</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Franja de ventajas debajo del hero -->
+  <section class="perks">
+    <div class="container perks__grid">
+      <div><strong>12 meses</strong><span>de garantía en reparaciones</span></div>
+      <div><strong>Precio cerrado</strong><span>antes de tocar tu coche</span></div>
+      <div><strong>Coche de cortesía</strong><span>en reparaciones largas</span></div>
+      <div><strong>Todas las marcas</strong><span>gasolina, diésel e híbridos</span></div>
+    </div>
+  </section>
+
+  <!-- ========== SERVICIOS ========== -->
+  <section id="servicios" class="section">
+    <div class="container">
+      <p class="eyebrow">Servicios</p>
+      <h2>Todo lo que necesita tu coche</h2>
+      <div class="services">
+        <article class="service">
+          <img src="https://images.unsplash.com/photo-1487754180451-c456f719a1fc?w=600&q=70" alt="Mecánico echando aceite al motor" loading="lazy">
+          <div><h3>Cambio de aceite</h3><p>Aceite y filtro según el fabricante. En 30 minutos y sin cita.</p></div>
+        </article>
+        <article class="service">
+          <img src="https://images.unsplash.com/photo-1625047509248-ec889cbff17f?w=600&q=70" alt="Motor de un coche con el capó abierto" loading="lazy">
+          <div><h3>Diagnosis electrónica</h3><p>¿Testigo encendido? Leemos la centralita y te explicamos qué pasa.</p></div>
+        </article>
+        <article class="service">
+          <img src="https://images.unsplash.com/photo-1486262715619-67b85e0b08d3?w=600&q=70" alt="Correas y poleas de un motor" loading="lazy">
+          <div><h3>Distribución y mecánica</h3><p>Kit de distribución, embrague, suspensión y reparaciones generales.</p></div>
+        </article>
+        <article class="service">
+          <img src="https://images.unsplash.com/photo-1504222490345-c075b6008014?w=600&q=70" alt="Mecánico revisando un coche en el taller" loading="lazy">
+          <div><h3>Pre-ITV</h3><p>Revisamos todo lo que mira la ITV para que pases a la primera.</p></div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== CALCULADORA DE PRESUPUESTO ========== -->
+  <section id="presupuesto" class="section section--dark">
+    <div class="container quote">
+      <div>
+        <p class="eyebrow">Presupuesto online</p>
+        <h2>Calcula cuánto te costará</h2>
+        <p class="muted">Marca lo que necesitas y verás un precio orientativo al momento. Te confirmamos el precio final por WhatsApp.</p>
+
+        <!-- Tipo de vehículo: data-mult multiplica el precio (los coches grandes llevan más aceite, pastillas más caras...) -->
+        <h3 class="quote__label">1. Tipo de vehículo</h3>
+        <div class="vehicles">
+          <label><input type="radio" name="vehicle" value="Utilitario" data-mult="1" checked><span>🚗 Utilitario</span></label>
+          <label><input type="radio" name="vehicle" value="Berlina / SUV" data-mult="1.2"><span>🚙 Berlina / SUV</span></label>
+          <label><input type="radio" name="vehicle" value="Furgoneta" data-mult="1.35"><span>🚐 Furgoneta</span></label>
+        </div>
+
+        <!-- Servicios: data-price es el precio base de cada uno -->
+        <h3 class="quote__label">2. ¿Qué necesitas?</h3>
+        <div class="options">
+          <label><input type="checkbox" value="Cambio de aceite y filtro" data-price="69"><span>Cambio de aceite y filtro</span><b>69 €</b></label>
+          <label><input type="checkbox" value="Pastillas de freno delanteras" data-price="89"><span>Pastillas de freno delanteras</span><b>89 €</b></label>
+          <label><input type="checkbox" value="Pre-ITV" data-price="25"><span>Pre-ITV</span><b>25 €</b></label>
+          <label><input type="checkbox" value="Carga de aire acondicionado" data-price="59"><span>Carga de aire acondicionado</span><b>59 €</b></label>
+          <label><input type="checkbox" value="Diagnosis electrónica" data-price="35"><span>Diagnosis electrónica</span><b>35 €</b></label>
+          <label><input type="checkbox" value="Revisión completa" data-price="119"><span>Revisión completa (30 puntos)</span><b>119 €</b></label>
+        </div>
+      </div>
+
+      <!-- Resumen que se actualiza solo -->
+      <aside class="summary">
+        <h3>Tu presupuesto</h3>
+        <ul id="summary-list"><li class="muted">Aún no has elegido nada.</li></ul>
+        <p class="summary__total">Total aprox. <strong id="total">0 €</strong></p>
+        <small class="muted">IVA incluido. Precio orientativo, sujeto a revisión del vehículo.</small>
+        <label class="plate">Matrícula (opcional)<input type="text" id="plate" placeholder="1234 ABC" maxlength="8"></label>
+        <button class="btn" id="send-quote" disabled>Pedir cita por WhatsApp</button>
+      </aside>
+    </div>
+  </section>
+
+  <!-- ========== CONTACTO ========== -->
+  <section id="contacto" class="section">
+    <div class="container contact">
+      <div>
+        <p class="eyebrow">Contacto</p>
+        <h2>Ven a vernos</h2>
+        <ul class="contact__list">
+          <li>📍 Polígono Ejemplo, nave 7 · 30100 Murcia</li>
+          <li>🕗 Lunes a viernes: 8:00–13:30 y 15:30–19:00</li>
+          <li>🕗 Sábados: 9:00–13:00</li>
+          <li>📞 <a href="tel:+34600000000">600 000 000</a></li>
+        </ul>
+        <a href="tel:+34600000000" class="btn">Llamar ahora</a>
+      </div>
+      <iframe class="map" title="Mapa de la zona del taller" loading="lazy"
+        src="https://maps.google.com/maps?q=Espinardo%2C%20Murcia&z=14&output=embed"></iframe>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container">
+      <p class="logo"><span class="logo__icon">⚙</span> PISTÓN<b>MOTOR</b></p>
+      <p class="demo-note">Web de demostración diseñada por <a href="../../">PixelMur</a>. Pistón Motor es un negocio ficticio.</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nácar Peluquería · Peluquería unisex en Murcia</title>
+  <meta name="description" content="Cortes, color y peinados para ella y para él en Murcia. Pide tu cita online en menos de un minuto.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;700&family=Manrope:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Barra de promoción arriba del todo -->
+  <div class="promo">✨ Primera visita: <strong>-15%</strong> en cualquier servicio</div>
+
+  <header class="header">
+    <div class="container header__inner">
+      <a href="#" class="logo">NÁCAR<span>peluquería</span></a>
+      <nav class="nav">
+        <a href="#servicios">Servicios</a>
+        <a href="#equipo">Equipo</a>
+        <a href="#galeria">Trabajos</a>
+        <a href="#cita" class="btn btn--small">Pedir cita</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- ========== HERO partido: texto | foto ========== -->
+  <section class="hero">
+    <div class="container hero__grid">
+      <div>
+        <p class="eyebrow">Peluquería unisex · Murcia</p>
+        <h1>Tu mejor versión empieza por el pelo</h1>
+        <p class="hero__text">Cortes, color y tratamientos para ella y para él. Productos profesionales y un equipo que te escucha.</p>
+        <div class="hero__buttons">
+          <a href="#cita" class="btn">Pedir cita online</a>
+          <a href="#servicios" class="btn btn--ghost">Ver precios</a>
+        </div>
+        <div class="stats">
+          <div><strong>12</strong><span>años en Murcia</span></div>
+          <div><strong>4</strong><span>estilistas</span></div>
+          <div><strong>&lt;1 min</strong><span>para reservar</span></div>
+        </div>
+      </div>
+      <img class="hero__img" src="https://images.unsplash.com/photo-1560066984-138dadb4c035?w=900&q=75" alt="Interior luminoso de la peluquería con sillones y espejos">
+    </div>
+  </section>
+
+  <!-- ========== SERVICIOS ========== -->
+  <section id="servicios" class="section section--alt">
+    <div class="container">
+      <p class="eyebrow center">Servicios y precios</p>
+      <h2 class="center">Elige lo que necesitas</h2>
+
+      <!-- Cada servicio tiene un botón con data-service: al pulsarlo, script.js
+           lo selecciona en el formulario de cita y baja hasta él -->
+      <div class="services">
+        <div class="service-group">
+          <h3>Para ella</h3>
+          <ul>
+            <li><div><b>Corte y peinado</b><small>45 min</small></div><span>28 €</span><button data-service="Corte y peinado (ella)">Reservar</button></li>
+            <li><div><b>Lavar y peinar</b><small>30 min</small></div><span>16 €</span><button data-service="Lavar y peinar">Reservar</button></li>
+            <li><div><b>Recogido de evento</b><small>60 min</small></div><span>40 €</span><button data-service="Recogido de evento">Reservar</button></li>
+          </ul>
+        </div>
+        <div class="service-group">
+          <h3>Para él</h3>
+          <ul>
+            <li><div><b>Corte clásico</b><small>30 min</small></div><span>14 €</span><button data-service="Corte clásico (él)">Reservar</button></li>
+            <li><div><b>Degradado (fade)</b><small>40 min</small></div><span>17 €</span><button data-service="Degradado (fade)">Reservar</button></li>
+            <li><div><b>Corte + barba</b><small>50 min</small></div><span>22 €</span><button data-service="Corte + barba">Reservar</button></li>
+          </ul>
+        </div>
+        <div class="service-group">
+          <h3>Color y tratamientos</h3>
+          <ul>
+            <li><div><b>Tinte raíz</b><small>75 min</small></div><span>35 €</span><button data-service="Tinte raíz">Reservar</button></li>
+            <li><div><b>Mechas balayage</b><small>2 h 30 min</small></div><span>desde 75 €</span><button data-service="Mechas balayage">Reservar</button></li>
+            <li><div><b>Keratina</b><small>2 h</small></div><span>desde 90 €</span><button data-service="Keratina">Reservar</button></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== EQUIPO ========== -->
+  <!-- Usamos iniciales en vez de fotos: con un cliente real pondremos fotos del equipo -->
+  <section id="equipo" class="section">
+    <div class="container">
+      <p class="eyebrow center">Equipo</p>
+      <h2 class="center">Manos expertas</h2>
+      <div class="team">
+        <article><div class="avatar">LM</div><h3>Lucía</h3><p>Color y balayage</p></article>
+        <article><div class="avatar">CR</div><h3>Carlos</h3><p>Barbería y fades</p></article>
+        <article><div class="avatar">AP</div><h3>Ana</h3><p>Recogidos y novias</p></article>
+        <article><div class="avatar">DG</div><h3>Diego</h3><p>Cortes y tratamientos</p></article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== GALERÍA ========== -->
+  <section id="galeria" class="section section--alt">
+    <div class="container">
+      <p class="eyebrow center">Trabajos</p>
+      <h2 class="center">Algunos de nuestros trabajos</h2>
+      <!-- Galería en mosaico: la primera foto ocupa dos filas (ver .gallery en CSS) -->
+      <div class="gallery">
+        <img src="https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?w=700&q=75" alt="Melena larga y ondulada" loading="lazy">
+        <img src="https://images.unsplash.com/photo-1622286342621-4bd786c2447c?w=600&q=75" alt="Barbero haciendo un corte masculino" loading="lazy">
+        <img src="https://images.unsplash.com/photo-1562322140-8baeececf3df?w=600&q=75" alt="Estilista secando el pelo a una clienta" loading="lazy">
+        <img src="https://images.unsplash.com/photo-1585747860715-2ba37e788b70?w=600&q=75" alt="Zona de barbería con sillones clásicos" loading="lazy">
+        <img src="https://images.unsplash.com/photo-1521590832167-7bcbfaa6381f?w=600&q=75" alt="Sillones de peluquería rosas frente a espejos" loading="lazy">
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== CITA ONLINE ========== -->
+  <section id="cita" class="section">
+    <div class="container booking">
+      <div class="booking__info">
+        <p class="eyebrow">Cita online</p>
+        <h2>Reserva en 3 pasos</h2>
+        <ol class="steps">
+          <li>Elige servicio y estilista</li>
+          <li>Escoge día y hora libre</li>
+          <li>Confirma por WhatsApp</li>
+        </ol>
+        <div class="hours">
+          <h3>Horario</h3>
+          <p>Martes a viernes: 10:00–14:00 y 16:30–20:30</p>
+          <p>Sábado: 9:00–14:00</p>
+          <p>Domingo y lunes: cerrado</p>
+          <p class="address">📍 Avenida Ejemplo, 45 · 30008 Murcia</p>
+        </div>
+      </div>
+
+      <form id="booking" class="form">
+        <label>Servicio
+          <select id="service" required>
+            <option value="">Elige un servicio…</option>
+            <!-- Las opciones se rellenan solas desde la lista de servicios (script.js) -->
+          </select>
+        </label>
+        <label>Estilista
+          <select id="stylist">
+            <option>Sin preferencia</option>
+            <option>Lucía</option><option>Carlos</option><option>Ana</option><option>Diego</option>
+          </select>
+        </label>
+        <label>Día <input type="date" id="date" required></label>
+        <p class="form__hint" id="date-hint">Elige un día para ver las horas libres.</p>
+        <!-- Aquí script.js dibuja los botones de horas -->
+        <div class="slots" id="slots"></div>
+        <label>Tu nombre <input type="text" id="name" required></label>
+        <button type="submit" class="btn">Confirmar por WhatsApp</button>
+      </form>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container">
+      <p class="logo">NÁCAR<span>peluquería</span></p>
+      <p class="demo-note">Web de demostración diseñada por <a href="../../">PixelMur</a>. Nácar Peluquería es un negocio ficticio.</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

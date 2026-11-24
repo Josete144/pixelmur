@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Café Limonar · Desayunos y café de especialidad en Murcia</title>
+  <meta name="description" content="Desayunos caseros, café de especialidad y repostería artesana en el centro de Murcia. Reserva tu mesa por WhatsApp.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <!-- Dos fuentes: una elegante para títulos (Playfair) y otra limpia para texto (Inter) -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Playfair+Display:wght@600;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- ========== MENÚ ========== -->
+  <header class="header">
+    <div class="container header__inner">
+      <a href="#" class="logo">Café <em>Limonar</em></a>
+      <nav class="nav">
+        <a href="#carta">Carta</a>
+        <a href="#horario">Horario</a>
+        <a href="#ubicacion">Dónde estamos</a>
+        <a href="#reservar" class="btn btn--small">Reservar</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- ========== HERO con foto de fondo ========== -->
+  <section class="hero">
+    <div class="container hero__content">
+      <!-- El texto de este badge lo cambia script.js según la hora -->
+      <p class="status" id="status">Comprobando horario…</p>
+      <h1>El mejor desayuno<br>del centro de Murcia</h1>
+      <p>Café de especialidad, tostadas con pan de masa madre y repostería hecha cada mañana.</p>
+      <div class="hero__buttons">
+        <a href="#reservar" class="btn">Reservar mesa</a>
+        <a href="#carta" class="btn btn--light">Ver la carta</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== SOBRE NOSOTROS ========== -->
+  <section class="section">
+    <div class="container about">
+      <img src="https://images.unsplash.com/photo-1509042239860-f550ce710b93?w=800&q=75" alt="Tazas de café con arte latte sobre una mesa de madera" loading="lazy">
+      <div>
+        <p class="eyebrow">Nuestra historia</p>
+        <h2>Un rincón tranquilo para empezar el día</h2>
+        <p>Abrimos con una idea sencilla: hacer las cosas como en casa. Tostamos nuestro café con productores locales, el pan llega cada mañana del horno de al lado y los zumos se exprimen al momento con naranjas de la huerta murciana.</p>
+        <ul class="features">
+          <li>☕ Café de especialidad</li>
+          <li>🥖 Pan de masa madre</li>
+          <li>🍊 Zumo natural</li>
+          <li>🌱 Opciones veganas</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== CARTA con pestañas ========== -->
+  <section id="carta" class="section section--alt">
+    <div class="container">
+      <p class="eyebrow center">Carta</p>
+      <h2 class="center">Lo que te espera</h2>
+
+      <!-- Botones de pestañas: data-tab dice qué categoría mostrar -->
+      <div class="tabs">
+        <button class="tab active" data-tab="desayunos">Desayunos</button>
+        <button class="tab" data-tab="cafes">Cafés</button>
+        <button class="tab" data-tab="dulces">Dulces</button>
+      </div>
+
+      <!-- Cada .menu tiene data-cat; script.js oculta las que no coinciden -->
+      <div class="menu" data-cat="desayunos">
+        <article class="dish">
+          <img src="https://images.unsplash.com/photo-1525351484163-7529414344d8?w=600&q=75" alt="Tostada con aguacate y huevo" loading="lazy">
+          <div class="dish__body">
+            <div class="dish__top"><h3>Tostada Limonar</h3><span>6,50 €</span></div>
+            <p>Masa madre, aguacate, huevo a la plancha y semillas.</p>
+          </div>
+        </article>
+        <article class="dish">
+          <img src="https://images.unsplash.com/photo-1484723091739-30a097e8f929?w=600&q=75" alt="Torrijas francesas con plátano y arándanos" loading="lazy">
+          <div class="dish__body">
+            <div class="dish__top"><h3>French toast</h3><span>7,00 €</span></div>
+            <p>Brioche, plátano, arándanos y sirope de arce.</p>
+          </div>
+        </article>
+        <article class="dish dish--text">
+          <div class="dish__body">
+            <div class="dish__top"><h3>Tostada murciana</h3><span>3,20 €</span></div>
+            <p>Tomate rallado, aceite de oliva virgen extra y sal.</p>
+            <div class="dish__top"><h3>Combo desayuno</h3><span>4,50 €</span></div>
+            <p>Café + tostada a elegir + zumo de naranja natural.</p>
+          </div>
+        </article>
+      </div>
+
+      <div class="menu" data-cat="cafes" hidden>
+        <article class="dish">
+          <img src="https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?w=600&q=75" alt="Dos cafés con leche con arte latte" loading="lazy">
+          <div class="dish__body">
+            <div class="dish__top"><h3>Flat white</h3><span>2,60 €</span></div>
+            <p>Doble ristretto con leche texturizada.</p>
+          </div>
+        </article>
+        <article class="dish dish--text">
+          <div class="dish__body">
+            <div class="dish__top"><h3>Café con leche</h3><span>1,80 €</span></div>
+            <p>El de siempre, con nuestro tueste de la casa.</p>
+            <div class="dish__top"><h3>Asiático</h3><span>2,50 €</span></div>
+            <p>El clásico de Cartagena: café, leche condensada, coñac y Licor 43.</p>
+            <div class="dish__top"><h3>Café del tiempo</h3><span>2,00 €</span></div>
+            <p>Café con hielo y limón, perfecto para el verano murciano.</p>
+          </div>
+        </article>
+      </div>
+
+      <div class="menu" data-cat="dulces" hidden>
+        <article class="dish">
+          <img src="https://images.unsplash.com/photo-1551024601-bec78aea704b?w=600&q=75" alt="Donuts con chocolate y virutas de colores" loading="lazy">
+          <div class="dish__body">
+            <div class="dish__top"><h3>Donuts caseros</h3><span>2,20 €</span></div>
+            <p>Glaseados de chocolate, hechos cada mañana.</p>
+          </div>
+        </article>
+        <article class="dish dish--text">
+          <div class="dish__body">
+            <div class="dish__top"><h3>Paparajotes</h3><span>3,50 €</span></div>
+            <p>Hoja de limonero rebozada con azúcar y canela. ¡Muy de aquí!</p>
+            <div class="dish__top"><h3>Tarta de queso</h3><span>4,00 €</span></div>
+            <p>Cremosa, al horno, con base de galleta.</p>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== HORARIO + UBICACIÓN ========== -->
+  <section id="horario" class="section">
+    <div class="container info">
+      <div>
+        <p class="eyebrow">Horario</p>
+        <h2>Cuándo venir</h2>
+        <!-- script.js resalta la fila del día de hoy -->
+        <table class="hours">
+          <tr data-day="1"><td>Lunes</td><td>7:30 – 13:30</td></tr>
+          <tr data-day="2"><td>Martes</td><td>7:30 – 13:30</td></tr>
+          <tr data-day="3"><td>Miércoles</td><td>7:30 – 13:30</td></tr>
+          <tr data-day="4"><td>Jueves</td><td>7:30 – 13:30</td></tr>
+          <tr data-day="5"><td>Viernes</td><td>7:30 – 14:00</td></tr>
+          <tr data-day="6"><td>Sábado</td><td>8:30 – 14:00</td></tr>
+          <tr data-day="0"><td>Domingo</td><td>Cerrado</td></tr>
+        </table>
+        <p class="address" id="ubicacion">📍 Calle Ejemplo, 12 · 30001 Murcia</p>
+      </div>
+      <!-- Mapa de Google incrustado (no necesita clave) -->
+      <iframe class="map" title="Mapa de Murcia centro" loading="lazy"
+        src="https://maps.google.com/maps?q=Catedral%20de%20Murcia&z=15&output=embed"></iframe>
+    </div>
+  </section>
+
+  <!-- ========== RESERVA ========== -->
+  <section id="reservar" class="section section--alt">
+    <div class="container booking">
+      <div>
+        <p class="eyebrow">Reservas</p>
+        <h2>Reserva tu mesa en 30 segundos</h2>
+        <p>Rellena el formulario y te llegará la confirmación por WhatsApp.</p>
+        <img src="https://images.unsplash.com/photo-1559925393-8be0ec4767c8?w=800&q=75" alt="Terraza de una cafetería con mesas al aire libre" loading="lazy">
+      </div>
+      <form id="booking-form" class="form">
+        <label>Nombre <input type="text" id="b-name" required></label>
+        <div class="form__row">
+          <label>Día <input type="date" id="b-date" required></label>
+          <label>Hora <input type="time" id="b-time" min="07:30" max="13:30" required></label>
+        </div>
+        <label>Personas
+          <select id="b-people">
+            <option>1</option><option selected>2</option><option>3</option>
+            <option>4</option><option>5</option><option>6+</option>
+          </select>
+        </label>
+        <label>¿Interior o terraza?
+          <select id="b-zone"><option>Me da igual</option><option>Interior</option><option>Terraza</option></select>
+        </label>
+        <button type="submit" class="btn">Reservar por WhatsApp</button>
+      </form>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container">
+      <p class="logo">Café <em>Limonar</em></p>
+      <!-- Aviso importante: esto es una web de ejemplo, el negocio no existe -->
+      <p class="demo-note">Web de demostración diseñada por <a href="../../">PixelMur</a>. Café Limonar es un negocio ficticio.</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

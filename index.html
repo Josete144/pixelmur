@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <!-- Esta línea hace que la web se vea bien en el móvil -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PixelMur · Páginas web para negocios en Murcia</title>
+  <!-- La descripción es lo que sale en Google debajo del título -->
+  <meta name="description" content="Diseño páginas web rápidas y modernas para negocios de Murcia: web, Google Maps, WhatsApp y reservas online.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- ========== CABECERA / MENÚ ========== -->
+  <header class="header">
+    <div class="container header__inner">
+      <a href="#" class="logo">PixelMur<span>.web</span></a>
+      <nav class="nav">
+        <a href="#servicios">Servicios</a>
+        <a href="#proyectos">Proyectos</a>
+        <a href="#precios">Precios</a>
+        <a href="#contacto" class="btn btn--small">Contacto</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- ========== HERO (lo primero que se ve) ========== -->
+  <!-- Hero en dos columnas: texto a la izquierda, formulario a la derecha -->
+  <section class="hero">
+    <div class="container hero__grid">
+      <div class="hero__left">
+        <p class="tag">📍 Diseñador web en Murcia</p>
+        <h1>Tu web profesional <span class="highlight">desde 249 €</span></h1>
+        <p class="hero__text">
+          Webs rápidas y pensadas para que te encuentren en Google y te escriban por WhatsApp.
+          Hablas directamente conmigo, sin agencias ni intermediarios.
+        </p>
+        <div class="hero__buttons">
+          <a href="#contacto" class="btn">Pide tu web</a>
+          <a href="#proyectos" class="btn btn--ghost">Ver ejemplos</a>
+        </div>
+        <!-- Puntos de confianza: resuelven dudas antes de que pregunten -->
+        <ul class="trust">
+          <li>⚡ Entrega en 7–14 días</li>
+          <li>📱 Perfecta en móvil</li>
+          <li>💶 50% al empezar, 50% al terminar</li>
+          <li>🤝 Sin permanencia</li>
+        </ul>
+      </div>
+
+      <!-- Formulario: al enviarlo abre WhatsApp con el mensaje ya escrito (ver script.js).
+           No necesita servidor ni guarda datos. -->
+      <form class="quote" id="quote-form">
+        <h2>Pide presupuesto gratis</h2>
+        <p>Cuéntame qué hace tu negocio y te digo qué web necesitas.</p>
+        <input type="text" id="q-name" placeholder="Tu nombre" required>
+        <input type="text" id="q-business" placeholder="Tu negocio (ej: bar, peluquería...)" required>
+        <textarea id="q-msg" rows="3" placeholder="¿Qué necesitas? (opcional)"></textarea>
+        <button type="submit" class="btn">💬 Enviar por WhatsApp</button>
+        <small>Te respondo normalmente el mismo día.</small>
+      </form>
+    </div>
+  </section>
+
+  <!-- ========== SERVICIOS ========== -->
+  <section id="servicios" class="section">
+    <div class="container">
+      <h2>¿Qué hago por tu negocio?</h2>
+      <!-- "grid" coloca las tarjetas en columnas (mira styles.css) -->
+      <div class="grid">
+        <article class="card">
+          <div class="card__icon">🌐</div>
+          <h3>Página web</h3>
+          <p>Moderna, rápida y que se ve perfecta en el móvil, que es desde donde te buscan tus clientes.</p>
+        </article>
+        <article class="card">
+          <div class="card__icon">📍</div>
+          <h3>Google Maps</h3>
+          <p>Configuro tu ficha de Google para que aparezcas cuando alguien busque "cerca de mí".</p>
+        </article>
+        <article class="card">
+          <div class="card__icon">💬</div>
+          <h3>WhatsApp y reservas</h3>
+          <p>Un botón para que te escriban al momento y un sistema de citas o reservas online.</p>
+        </article>
+        <article class="card">
+          <div class="card__icon">🛠️</div>
+          <h3>Mantenimiento</h3>
+          <p>Cambios de horarios, cartas, fotos y precios. Tú me escribes y yo lo actualizo.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== PROYECTOS ========== -->
+  <!-- Cada tarjeta enlaza a una demo de la carpeta demos/. Cuando tengas clientes, añade aquí sus webs -->
+  <section id="proyectos" class="section section--alt">
+    <div class="container">
+      <h2>Proyectos</h2>
+      <div class="grid grid--3">
+        <!-- Proyecto real: toda la tarjeta es un enlace a la demo -->
+        <a class="project project--link" href="demos/cafeteria/" target="_blank">
+          <img class="project__photo" src="https://images.unsplash.com/photo-1554118811-1e0d58224f24?w=700&q=70" alt="Vista de la web demo de Café Limonar" loading="lazy">
+          <div class="project__body">
+            <h3>Café Limonar <span class="project__tag">Demo</span></h3>
+            <p>Carta con pestañas, horario "abierto ahora", mapa y reservas por WhatsApp.</p>
+            <p class="project__cta">Ver web →</p>
+          </div>
+        </a>
+        <a class="project project--link" href="demos/peluqueria/" target="_blank">
+          <img class="project__photo" src="https://images.unsplash.com/photo-1560066984-138dadb4c035?w=700&q=70" alt="Vista de la web demo de Nácar Peluquería" loading="lazy">
+          <div class="project__body">
+            <h3>Nácar Peluquería <span class="project__tag">Demo</span></h3>
+            <p>Precios por servicio, equipo, galería y cita online con horas libres.</p>
+            <p class="project__cta">Ver web →</p>
+          </div>
+        </a>
+        <a class="project project--link" href="demos/taller/" target="_blank">
+          <img class="project__photo" src="https://images.unsplash.com/photo-1619642751034-765dfdf7c58e?w=700&q=70" alt="Vista de la web demo de Pistón Motor" loading="lazy">
+          <div class="project__body">
+            <h3>Pistón Motor <span class="project__tag">Demo</span></h3>
+            <p>Calculadora de presupuesto en vivo, servicios, llamada directa y mapa.</p>
+            <p class="project__cta">Ver web →</p>
+          </div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== PRECIOS ========== -->
+  <section id="precios" class="section">
+    <div class="container">
+      <h2>Precios claros</h2>
+      <p class="section__subtitle">Sin letra pequeña. Pagas el 50% al empezar y el 50% al entregar.</p>
+      <div class="grid grid--3">
+        <article class="price">
+          <h3>Básico</h3>
+          <p class="price__amount">249 €</p>
+          <ul>
+            <li>✔ Web de una página</li>
+            <li>✔ Adaptada a móvil</li>
+            <li>✔ Botón de WhatsApp</li>
+            <li>✔ Mapa de Google</li>
+          </ul>
+          <a href="#contacto" class="btn btn--ghost">Lo quiero</a>
+        </article>
+        <!-- "price--featured" destaca el plan que más te interesa vender -->
+        <article class="price price--featured">
+          <p class="price__badge">Más popular</p>
+          <h3>Negocio</h3>
+          <p class="price__amount">449 €</p>
+          <ul>
+            <li>✔ Hasta 5 secciones</li>
+            <li>✔ Todo lo del Básico</li>
+            <li>✔ Ficha de Google Maps</li>
+            <li>✔ Reservas o citas online</li>
+          </ul>
+          <a href="#contacto" class="btn">Lo quiero</a>
+        </article>
+        <article class="price">
+          <h3>Mantenimiento</h3>
+          <p class="price__amount">25 €<span>/mes</span></p>
+          <ul>
+            <li>✔ Cambios ilimitados pequeños</li>
+            <li>✔ Hosting y dominio</li>
+            <li>✔ Copias de seguridad</li>
+            <li>✔ Soporte por WhatsApp</li>
+          </ul>
+          <a href="#contacto" class="btn btn--ghost">Lo quiero</a>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== POR QUÉ YO / GARANTÍAS ========== -->
+  <section class="section section--alt">
+    <div class="container">
+      <h2>Trabajar conmigo es fácil</h2>
+      <div class="grid grid--3">
+        <article class="card">
+          <div class="card__icon">📝</div>
+          <h3>Todo claro por escrito</h3>
+          <p>Antes de empezar sabes qué incluye tu web, qué necesito de ti y cuándo estará lista.</p>
+        </article>
+        <article class="card">
+          <div class="card__icon">🔑</div>
+          <h3>Tu web es tuya</h3>
+          <p>El dominio y los accesos quedan a tu nombre. Nunca dependes de mí si no quieres.</p>
+        </article>
+        <article class="card">
+          <div class="card__icon">✅</div>
+          <h3>Revisada antes de publicar</h3>
+          <p>Compruebo móvil, velocidad, formularios y Google antes de darla por terminada.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== PREGUNTAS FRECUENTES ========== -->
+  <!-- <details> es un desplegable nativo de HTML: no necesita JavaScript -->
+  <section class="section">
+    <div class="container faq">
+      <h2>Dudas frecuentes</h2>
+      <details>
+        <summary>¿Cuánto tarda en estar lista mi web?</summary>
+        <p>Entre 7 y 14 días desde que me envías los textos y las fotos de tu negocio.</p>
+      </details>
+      <details>
+        <summary>¿Tengo que pagar algo cada mes?</summary>
+        <p>No es obligatorio. El mantenimiento (25 €/mes) es opcional e incluye hosting, dominio y cambios. Si prefieres, te lo dejo todo configurado y lo gestionas tú.</p>
+      </details>
+      <details>
+        <summary>¿Y si no me gusta el diseño?</summary>
+        <p>Antes de programar te enseño una propuesta y hacemos los cambios que necesites. Pagas el segundo 50% solo cuando la web te convence.</p>
+      </details>
+      <details>
+        <summary>¿Saldré en Google?</summary>
+        <p>Preparo la web y tu ficha de Google Maps para que aparezcas en búsquedas de tu zona, como "peluquería en Murcia".</p>
+      </details>
+    </div>
+  </section>
+
+  <!-- ========== CONTACTO ========== -->
+  <section id="contacto" class="section section--alt">
+    <div class="container contact">
+      <h2>¿Hablamos?</h2>
+      <p>Cuéntame qué negocio tienes y te digo gratis cómo mejorar tu presencia en internet.</p>
+      <!-- Tu WhatsApp: formato 34 + móvil, sin espacios -->
+      <a class="btn btn--big" href="https://wa.me/34622577149?text=Hola,%20me%20interesa%20una%20web%20para%20mi%20negocio" target="_blank" rel="noopener">
+        💬 Escríbeme por WhatsApp
+      </a>
+      <p class="contact__mail">o por email: <a href="mailto:joseaescas@gmail.com">joseaescas@gmail.com</a></p>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container">
+      <p>© 2026 PixelMur · Hecho a mano en Murcia 🧡</p>
+    </div>
+  </footer>
+
+  <!-- Botón flotante de WhatsApp (siempre visible abajo a la derecha) -->
+  <!-- Botón flotante con tu WhatsApp -->
+  <a class="wa-float" href="https://wa.me/34622577149" target="_blank" rel="noopener" aria-label="Escríbeme por WhatsApp">💬</a>
+
+  <script src="script.js"></script>
+</body>
+</html>
